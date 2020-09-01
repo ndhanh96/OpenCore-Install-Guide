@@ -1,8 +1,9 @@
-# Installation Process
+# Quy trình cài đặt
 
 Now that you've finished setting up OpenCore, you're finally able to boot, main things to keep in mind:
+Những điều nên nhớ khi đã cài đặt xong Opencore và boot được: 
 
-* Enable BIOS settings optimal for macOS
+* Cài đặt BIOS để tối ưu cho MacOS
 * Read up on the [Multiboot Guide](https://hackintosh-multiboot.gitbook.io/hackintosh-multiboot/)
   * Mainly relevant for those running a single drive for multiple OSes
 * And a copy of the [General Troubleshooting](../troubleshooting/troubleshooting.md) page
@@ -10,21 +11,22 @@ Now that you've finished setting up OpenCore, you're finally able to boot, main 
   * Can help first time installers better understand where they may be getting stuck
 * And a ton of patience
 
-## Double checking your work
+## Kiểm tra lại 1 lần nữa
 
 One last thing we should go over before booting is how your EFI is setup:
+Chúng ta nên kiểm tra lại EFI trước khi boot:
 
 Good EFI          |  Bad EFI
 :-------------------------:|:-------------------------:
 ![](../images/installation/install-md/good-efi.png)  |  ![](../images/installation/install-md/bad-efi.png)
-EFI folder found on EFI partition | EFI folder missing
-ACPI Files are compiled(.aml) | ACPI Files are not compiled(.dsl)
-DSDT is not included |* DSDT is included
-Removed unneeded Drivers(.efi) | Leaves default Drivers
-Removed unneeded Tools(.efi) | Leaves default Tools
-All files in the Kexts folder end in .kext | Includes source code and folders
-config.plist found under EFI/OC | Neither renamed or placed the .plist in right location
-Only uses kexts that are needed | Downloaded every kext listed
+Có thư mục EFI trên phân vùng EFI | Không có thư mục EFI
+Những file APCI đã được biên dịch(.aml) | File APCI chưa được biên dịch(.dsl)
+Không có DSDT |* Có DSDT
+Xoá Drivers(.efi) không cần thiết | Để như mặc định
+Xoá Tools(.efi) không cần thiết | Để như mặc định
+Tất cả cái file trong thư mục kext có đuôi .kext | Có nhiều thư mục không liên quan
+File config.plist phải ở trong EFI/OC | Tên và vị trí của .plist đều sai
+Chỉ cần dùng những kext cần thiết | Tải về tất cả các kext được nêu ra.
 
 And a reminder that slowgeek site is your friend:
 
